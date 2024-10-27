@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-77bc5afa76d941011187e24d109f4658"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "kom", "type": "nominal"}, {"field": "average", "type": "quantitative"}], "x": {"field": "kom", "title": "Kommune", "type": "nominal"}, "y": {"field": "average", "title": "Gjennomsnittlig prosent (2015-2023)", "type": "quantitative"}}, "title": "Gjennomsnittlig prosent av barn i barnehagen i ett- og to-\u00e5rsalderen (2015-2023) for de 10 kommunene med h\u00f8yest prosent", "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-77bc5afa76d941011187e24d109f4658": [{"kom": "1812 S\u00f8mna", "y15": 89.2, "y16": 100.0, "y17": 106.9, "y18": 111.5, "y19": 96.3, "y20": 103.7, "y21": 104.3, "y22": 86.2, "y23": 97.1, "average": 99.46666666666667}, {"kom": "1531 Sula", "y15": 87.5, "y16": 92.7, "y17": 91.3, "y18": 95.1, "y19": 94.7, "y20": 96.2, "y21": 92.3, "y22": 98.2, "y23": 100.9, "average": 94.32222222222222}, {"kom": "1870 Sortland - Suort\u00e1", "y15": 88.8, "y16": 90.6, "y17": 95.9, "y18": 90.4, "y19": 91.6, "y20": 91.7, "y21": 94.9, "y22": 97.5, "y23": 100.0, "average": 93.48888888888888}, {"kom": "2111 Longyearbyen", "y15": 89.8, "y16": 107.9, "y17": 82.6, "y18": 83.3, "y19": 105.9, "y20": 100.0, "y21": 85.7, "y22": 90.7, "y23": 86.1, "average": 92.44444444444446}, {"kom": "1516 Ulstein", "y15": 87.7, "y16": 90.5, "y17": 93.9, "y18": 89.9, "y19": 96.7, "y20": 92.6, "y21": 94.3, "y22": 92.5, "y23": 93.3, "average": 92.37777777777777}, {"kom": "1867 B\u00f8", "y15": 85.2, "y16": 95.0, "y17": 97.9, "y18": 97.4, "y19": 93.2, "y20": 86.0, "y21": 92.1, "y22": 86.8, "y23": 97.1, "average": 92.30000000000001}, {"kom": "1816 Vevelstad", "y15": 80.0, "y16": 92.3, "y17": 100.0, "y18": 90.0, "y19": 100.0, "y20": 100.0, "y21": 77.8, "y22": 90.0, "y23": 90.0, "average": 91.1222222222222}, {"kom": "1828 Nesna", "y15": 97.4, "y16": 76.7, "y17": 83.3, "y18": 96.4, "y19": 109.1, "y20": 90.6, "y21": 90.9, "y22": 81.8, "y23": 92.6, "average": 90.97777777777779}, {"kom": "1824 Vefsn", "y15": 84.8, "y16": 88.3, "y17": 91.5, "y18": 92.4, "y19": 89.9, "y20": 91.4, "y21": 93.1, "y22": 95.0, "y23": 92.2, "average": 90.95555555555556}, {"kom": "1515 Her\u00f8y (M\u00f8re og Romsdal)", "y15": 85.3, "y16": 87.8, "y17": 84.0, "y18": 86.3, "y19": 89.5, "y20": 93.5, "y21": 96.4, "y22": 94.3, "y23": 99.4, "average": 90.72222222222223}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
